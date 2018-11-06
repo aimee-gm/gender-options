@@ -6,6 +6,10 @@ cache:
   directories:
     - ~/.npm
 
+stages:
+  - name: deploy
+    if: (tag =~ ^v) AND (branch = master)
+
 jobs:
   include:
     - name: 'node:lts'
