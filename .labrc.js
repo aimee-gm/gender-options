@@ -7,8 +7,9 @@ module.exports = {
 	verbose: true,
 	coverage: true,
 	'coverage-all': true,
-	'coverage-path': './src',
-	'coverage-pattern': '\.*',
+	'coverage-path': './',
+	'coverage-pattern': '.*\\.ts',
+	'coverage-exclude': 'node_modules',
 	reporter: ['console', 'html'],
-	output: ['stdout', 'coverage.html']
+	output: ['stdout', 'coverage.html'],
 };

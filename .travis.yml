@@ -1,0 +1,32 @@
+language: node_js
+
+node_js: 'lts/*'
+
+cache:
+  directories:
+    - ~/.npm
+
+jobs:
+  include:
+    - name: 'node:lts'
+      stage: test
+      script:
+        - npm run build
+        - npm test
+    - name: 'node:latest'
+      node_js: 'node'
+      stage: test
+    - name: 'npm'
+      stage: deploy
+      script:
+        - npm run build
+      deploy:
+        provider: npm
+        skip-cleanup: true
+        email: $NPM_EMAIL
+        api_key: $NPM_APIKEY
+        on:
+          tags: true
+
+notifications:
+  email: false
