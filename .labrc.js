@@ -9,7 +9,7 @@ module.exports = {
 	'coverage-all': true,
 	'coverage-path': './',
 	'coverage-pattern': '.*\\.ts',
-	'coverage-exclude': 'node_modules',
+	'coverage-exclude': ['node_modules', 'dist'],
 	reporter: ['console', 'html'],
 	output: ['stdout', 'coverage.html'],
 };
