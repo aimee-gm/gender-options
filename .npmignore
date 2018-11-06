@@ -1,0 +1,8 @@
+**/test/*
+*.ts
+.huskyrc.json
+.prettierignore
+.prettierrc.yml
+.travis.yml
+.labrc.js
+tsconfig.json
