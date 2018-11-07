@@ -16,13 +16,13 @@ npm install --save gender-options
 ## Usage
 
 ```javascript
-const { genderOptions } = require('gender-options`);
+const { genderOptions } = require('gender-options');
 ```
 
 or
 
 ```javascript
-import { genderOptions } from 'gender-options`
+import { genderOptions } from 'gender-options';
 ```
 
 ## Data structure
