@@ -30,6 +30,8 @@ jobs:
         skip-cleanup: true
         email: $NPM_EMAIL
         api_key: $NPM_APIKEY
+        on:
+          tags: true
 
 notifications:
   email: false
