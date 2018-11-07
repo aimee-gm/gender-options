@@ -1,14 +1,14 @@
-import { genders, Gender, ListOptions } from './genders';
-
-interface GenderOption {
-	label: string;
-	value: string;
-}
+import { genders, Gender, ListOptions, GenderOption } from './lib/genders';
+import { sortGenders } from './lib/sort';
 
 function GenderOptions(genders: Gender[], listName: ListOptions) {
-	return genders
+	const list = genders
 		.filter((gender) => gender.list === listName)
 		.map(({ label, value }): GenderOption => ({ label, value }));
+
+	sortGenders(list);
+
+	return list;
 }
 
 const basic = GenderOptions(genders, 'basic');
