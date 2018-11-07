@@ -6,15 +6,20 @@ export interface Gender {
 	list: ListOptions;
 }
 
+export interface GenderOption {
+	label: string;
+	value: string;
+}
+
 export const genders: Gender[] = [
-	{
-		label: 'Female',
-		value: 'female',
-		list: 'basic',
-	},
 	{
 		label: 'Male',
 		value: 'male',
+		list: 'basic',
+	},
+	{
+		label: 'Female',
+		value: 'female',
 		list: 'basic',
 	},
 	{

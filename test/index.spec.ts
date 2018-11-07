@@ -27,6 +27,12 @@ suite('The index export', () => {
 				expect(gender.value).to.be.a.string();
 			}
 		});
+
+		test('elements are ordered by their label', () => {
+			expect<string[]>(
+				genderOptions.basic.map((gender) => gender.value)
+			).to.equal(['female', 'male', 'nonbinary']);
+		});
 	});
 
 	experiment('GenderOptions.standard array', () => {
@@ -40,6 +46,10 @@ suite('The index export', () => {
 				expect(gender.value).to.be.a.string();
 			}
 		});
+
+		test('contains the GenderOptions.basic array', () => {
+			expect(genderOptions.standard).to.include(genderOptions.basic);
+		});
 	});
 
 	experiment('GenderOptions.extended array', () => {
@@ -47,10 +57,19 @@ suite('The index export', () => {
 			expect(genderOptions.extended).length(21);
 		});
 
-		test('elements are an object with label and value', { plan: 42 }, () => {
+		test('contains the GenderOptions.standard array', () => {
+			expect(genderOptions.extended).to.include(genderOptions.standard);
+		});
+
+		test('has capitalized labels', { plan: 21 }, () => {
 			for (const gender of genderOptions.extended) {
-				expect(gender.label).to.be.a.string();
-				expect(gender.value).to.be.a.string();
+				expect(gender.label).to.match(/^[A-Z][a-z- ]+$/);
+			}
+		});
+
+		test('has lowercase values', { plan: 21 }, () => {
+			for (const gender of genderOptions.extended) {
+				expect(gender.value).to.match(/^[a-z]+$/);
 			}
 		});
 	});
