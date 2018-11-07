@@ -1,4 +1,5 @@
 import { genders, Gender, ListOptions, GenderOption } from './lib/genders';
+export { Gender, ListOptions, GenderOption } from './lib/genders';
 import { sortGenders } from './lib/sort';
 
 function GenderOptions(genders: Gender[], listName: ListOptions) {
