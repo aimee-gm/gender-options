@@ -1,7 +1,8 @@
 # Gender-options
 
-A lightweight package that exports a list of gender options.
+A lightweight package to provide easy lists of gender options for use in web forms.
 
+[![NPM Version](https://img.shields.io/npm/v/gender-options.svg)](https://www.npmjs.com/package/gender-options)
 [![Build Status](https://travis-ci.org/aimee-gm/gender-options.svg?branch=master)](https://travis-ci.org/aimee-gm/gender-options)
 ![MIT License](https://img.shields.io/github/license/aimee-gm/gender-options.svg)
 
