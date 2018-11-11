@@ -1,6 +1,4 @@
 **/test/*
-index.ts
-lib/
 .huskyrc.json
 .prettierignore
 .prettierrc.yml
