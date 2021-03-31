@@ -18,9 +18,6 @@ jobs:
       script:
         - npm run build
         - npm test
-    - name: 'node:latest'
-      node_js: 'node'
-      stage: test
     - name: 'npm'
       stage: deploy
       script:
