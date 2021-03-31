@@ -83,8 +83,8 @@ export const genders: Gender[] = [
 		list: 'standard',
 	},
 	{
-		label: 'Neutrosis',
-		value: 'neutrosis',
+		label: 'Neutrois',
+		value: 'neutrois',
 		list: 'standard',
 	},
 	{
